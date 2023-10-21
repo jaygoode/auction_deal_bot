@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "huutokauppa-robot"
+version = "0.1.0"
+description = ""
+authors = ["Johnny Nylund <91679773+jaygoode@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+selenium = "^4.14.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
