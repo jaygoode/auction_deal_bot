@@ -1,16 +1,14 @@
 from functions import (
-    open_huutokaupat,
-    login_to_huutokaupat,
-    search_items,
-    add_to_following_list,
+    Selenium_functions,
 )
 
 
 def main():
-    driver = open_huutokaupat()
-    login_to_huutokaupat(driver)
-    search_items(driver)
-    add_to_following_list(driver)
+    selenium = Selenium_functions()
+    selenium.login_to_huutokaupat()
+    selenium.search_items()
+    postings = selenium.find_items_within_range()
+    selenium.send_mail(postings)
 
 
 if __name__ == "__main__":
